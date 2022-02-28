@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>博的客 | 博的客</title><meta name="keywords" content="博客"><meta name="author" content="Xiao Bo"><meta name="copyright" content="Xiao Bo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="零售企业会员客户的合理分群 - Tableau实现项目背景在当前普遍竞争激烈的买方市场环境中，零售企业为了平衡精准营销的成本与追踪精准营销的获利状况，以及 在避免对消费者的过度骚扰的前提下实现管家般的贴心服务，就必须实现了针对—群消费者的特征分析， 甚至实 现了基于每个消费者的精准营销。消费者行为分析是商业分析的永恒主题，是企业数据分析师的必备技能。其中客 户行为分群是消费者行为分析的重要一个环节">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博的客">
+<meta property="og:url" content="http://xiaobo1051087671.github.io/2022/02/28/%E9%9B%B6%E5%94%AE%E4%BC%81%E4%B8%9A%E4%BC%9A%E5%91%98%E5%AE%A2%E6%88%B7%E7%9A%84%E5%90%88%E7%90%86%E5%88%86%E7%BE%A4_-_Tableau%E5%AE%9E%E7%8E%B0/index.html">
+<meta property="og:site_name" content="博的客">
+<meta property="og:description" content="零售企业会员客户的合理分群 - Tableau实现项目背景在当前普遍竞争激烈的买方市场环境中，零售企业为了平衡精准营销的成本与追踪精准营销的获利状况，以及 在避免对消费者的过度骚扰的前提下实现管家般的贴心服务，就必须实现了针对—群消费者的特征分析， 甚至实 现了基于每个消费者的精准营销。消费者行为分析是商业分析的永恒主题，是企业数据分析师的必备技能。其中客 户行为分群是消费者行为分析的重要一个环节">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2022-02-28T09:23:32.919Z">
+<meta property="article:modified_time" content="2022-02-28T09:22:14.817Z">
+<meta property="article:author" content="Xiao Bo">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://xiaobo1051087671.github.io/2022/02/28/%E9%9B%B6%E5%94%AE%E4%BC%81%E4%B8%9A%E4%BC%9A%E5%91%98%E5%AE%A2%E6%88%B7%E7%9A%84%E5%90%88%E7%90%86%E5%88%86%E7%BE%A4_-_Tableau%E5%AE%9E%E7%8E%B0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '博的客',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-02-28 17:22:14'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">博的客</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-28T09:23:32.919Z" title="发表于 2022-02-28 17:23:32">2022-02-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-28T09:22:14.817Z" title="更新于 2022-02-28 17:22:14">2022-02-28</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="零售企业会员客户的合理分群-Tableau实现"><a href="#零售企业会员客户的合理分群-Tableau实现" class="headerlink" title="零售企业会员客户的合理分群 - Tableau实现"></a>零售企业会员客户的合理分群 - Tableau实现</h1><h3 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h3><p>在当前普遍竞争激烈的买方市场环境中，零售企业为了平衡精准营销的成本与追踪精准营销的获利状况，以及</p>
+<p>在避免对消费者的过度骚扰的前提下实现管家般的贴心服务，就必须实现了针对—群消费者的特征分析， 甚至实</p>
+<p>现了基于每个消费者的精准营销。消费者行为分析是商业分析的永恒主题，是企业数据分析师的必备技能。其中客</p>
+<p>户行为分群是消费者行为分析的重要一个环节。</p>
+<h3 id="项目目标"><a href="#项目目标" class="headerlink" title="项目目标"></a>项目目标</h3><p>如何在以下销售数据集上实现会员客户的合理分群，以达到精准推销的目的。</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/3da664c51bc4a7843f6b9710538573a2.jpeg" alt="image.png"></p>
+<p>其中数据有422919行</p>
+<h3 id="项目步骤"><a href="#项目步骤" class="headerlink" title="项目步骤"></a>项目步骤</h3><ol>
+<li><p>了解衡量客户行为特征的指标有哪些</p>
+<ul>
+<li>平均客单价：顾客平均购买商品的金额</li>
+<li>单品类客户平均消费额：买的所有商品所在类别的平均价格之和，再处于买的商品个数</li>
+</ul>
+<p>为了更全面地了解数据， 可以绘制”客单价＂ 的直方图。按500元划分等级， 可以看到最多的购买行为金额分布在0~ 500元， “平均客单价” 指标受到了极端值的很大影响， 高于3200元， 多数客户单次购买金额并没有这么高。</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/88957e0b331b07b30313aa89919f79d6.png" alt="image.png"></p>
+</li>
+<li><p>为了了解划分不同行为的客户群体， 以及探索不同群体的代表特征是什么，需要根据群体划分的商业目标选择一些指标，使用聚类算法进行聚类分析，并对聚类结果进行归纳和探索，再根据所选择聚类指标上的不同特征来归纳不同的群体特点。</p>
+<p>对于本数据采用的是综合考虑会员的<strong>消费金额、购物次数、购物的品类结构</strong>来对客户进行划分</p>
+<p><strong>难点是：如何来量化购物的品类结构这个指标</strong></p>
+<p>思路：</p>
+<ul>
+<li><p>会员在这个商店买的商品种类越接近，说明会员越相似</p>
+</li>
+<li><p>每一个商品种类的平均价格不一样</p>
+</li>
+</ul>
+<p>例如：张三买了洗衣机和微波炉，李四买了牙刷和毛巾，王五买了空调和沙发，假如这些商品还有其他型号。洗衣机、微波炉、空调和沙发的平均价格为2000、2500、3000、4000， 毛巾和杯子的平均价格为10、20，那么张三的单品类客户平均消费额为2250，李四为15，王五为3500，可以发现张三和王五更相似。</p>
+<p>Tips: </p>
+<p>分析消费金额和购物的数量，可以得到客户平均消费金额</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/04ae5e2f2d8381047c166321d07d0a11.jpeg" alt="image.png"></p>
+<p>可以发现，由于每个个体的消费金额差异太大，而且消费金额有些异常值，为了接下来的聚类以及更容易看出数据规律，需要将消费金额做出对数处理，使得消费金额更符合正态分布。</p>
+<p>聚类指标距离设置的算法受到指标量级的影响。数量等级比较大的指标， 会绝对主导距离设置的计算， 所以聚类使用销售金额(lg10)代替『销售金额』字段， 以降低量纲的数据级别，同时也方便在图形中观察模式。</p>
+<p>经过对消费金额做出对数处理后，可以看到对数处理后消费金额与购物次数呈线性关系</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/74be3c0be5dc9141ec344527705de946.jpeg" alt="image.png"></p>
+<p>在这个基础上再通过形状大小这个维度加入单品类客户平均消费额</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/9b6e05b057cbb859ca401378d515b91c.jpeg" alt="image.png"></p>
+<p>3.根据三个维度特征进行K均值聚类，得到K个群集，K可以自定义也可以自动生成，本次设置K=10</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/e13b624631603ac244d664c88267f28a.jpeg" alt="image.png"></p>
+<p>从而得到了按照会员的消费金额、购物次数、购物的品类结构三个维度进行的聚类结果</p>
+<p>可以发现：靠近图形右上方的群体消费累积次数多，累积金额多，点的大小相对较小。说明多数购买的是低价格产品，多次的消费行为累积了高金额， 推测主要是生活常用消耗品用户，并且属千客户生命期比较长的客户。</p>
+<p>接下来绘制群体聚类规模和群体消费金额的条形图。可以观察到划分出的群集聚类规模并不均匀，3个群集规模较大，其他的几个群集规模较小。不同群集贡献的购买金额和群集规模并不完全对应。</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/ebfdae4bf40e9c360c979c4aaae5ed27.jpeg" alt="image.png"></p>
+<p>图形中添加一条所有点到原点的趋势线，看到多数点汇集在趋势线附近，说明多数客户单次平均消费水平接近（消费金额／消费次数）， 如果维持目前的消费水平， 这种消费特征的客户， 消费额会随着时间持续增长， 但不容易从其身上获得超级利润。</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/edc3887eb35797819a3930cea24cbe7e.jpeg" alt="image.png"></p>
+<p>按照不同群集添加趋势线， 观察不同群集的消费频次和消费金额关系情况。看到， 有的群集以更少的产品消费频次贡献了更多的消费额。</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/cecd1f2b5b341d67bc016e43959a71ce.jpeg" alt="image.png"></p>
+<p>接着分开观察每个群集在不同大类上的购买数量和购买金额情况， 图形的柱形为群集的品类购买记录数， 区域图（面积）为群集品类消费金额。不同图形表明的购买记录数在其纵坐标轴上范围不同， 可以方便观察群体在不同类上的购买分布，描绘金额的图形坐标轴相同， 可以辅助观察消费贡献。</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/1119219772d0bb279bbe94a20342078e.png" alt="image.png"></p>
+<p>可以看到：</p>
+<ul>
+<li>群集8的总体规模不大，该群体行为显示了比较有趣的模式，在服装、 化妆品和数码产品（手机电脑）上都表现出了—定的购买倾向，群体中非常可能有大部分夫妻协同＂购物者，我们称为 恩爱的协同家庭” 。</li>
+<li>群集1和群集8的消费结构有—些相近，但群体8在食品上的消费比群体1要少很多， 群体1在童装、 户外用品上的消费要比群体8高。 对这两个群体可以再做深入研究，他们有可能属于不同年龄群体 群体8可能属于年轻情侣或夫妻，而群体1可能年龄更大，多数有后代，所以童装消费更多，数据表现出更强的经济能力，总体贡献的消费额很高，对生活品质可能要求更高，运动服饰和户外用品采购量相对更多。</li>
+<li>群体6和10表现出了显著的男性购物特征，家电品的购买量较高，群体中相当大比重应为男性。</li>
+<li>群集9代表比较特殊消费模式的客户，除了少类产品，其他品类上几乎没有消费，群体特征显示该群可能主要为男性群体，该群体在其他生活用品上的购买量很少，在日常生活上应该有其他人照顾，在家中不太关心生活琐事，购买主要由其他家庭成员完成。</li>
+</ul>
+<p>复制一个之前建立的散点图，更换列数据维度为『类平均购买价格』，重新绘制散点图，观察会员的其他消费特征。</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/f20c5474dad6c1055f6452752271965d.png" alt="image.png"></p>
+<p>图形上原点附近群集2的行为模式在这张散点图上可以观察得更加清晰，我们看到，该群的购买总频次和类平均购买价格的值都比较小，作为数量规模最大的群集，这个群集需要继续深入探索。如果是注册达到—定时期的老会员，说明客户生活中的多数购买行为都不是在本购物中心完成，这种状况是不可改变的吗？如何让客户更多的消费转到自己的企业。如果是新会员，可能应该做—些营销动作，提升新客户的体验，在初期接触时期维持住多数客户。</p>
+<p>这张图上，不同群集购买频次数和购买产品的平均购买价格水平模式更加清楚。原点附近的群集2, 购买频次数和平均购买价格水平都较低，但群集规模最大，人数最多。</p>
+</li>
+<li><p>最后，组合多张图表构建—个综合观察仪表盘，设置好各种动态过滤，突出显示效<br>果后，可以作为一个群集消费情况的鸟瞰视图随时跟踪观察经营状态。</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/84e594beb345b4d95a5721a174fe60a5.png" alt="image.png"></p>
+</li>
+</ol>
+<h3 id="项目结果"><a href="#项目结果" class="headerlink" title="项目结果"></a>项目结果</h3><p>从销售数据集上按照消费金额、购物次数、购物的品类结构三个维度，实现会员客户的合理分群，分析了10个群集的行为特征，为精准推销提供支持。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Xiao Bo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://xiaobo1051087671.github.io/2022/02/28/%E9%9B%B6%E5%94%AE%E4%BC%81%E4%B8%9A%E4%BC%9A%E5%91%98%E5%AE%A2%E6%88%B7%E7%9A%84%E5%90%88%E7%90%86%E5%88%86%E7%BE%A4_-_Tableau%E5%AE%9E%E7%8E%B0/">http://xiaobo1051087671.github.io/2022/02/28/%E9%9B%B6%E5%94%AE%E4%BC%81%E4%B8%9A%E4%BC%9A%E5%91%98%E5%AE%A2%E6%88%B7%E7%9A%84%E5%90%88%E7%90%86%E5%88%86%E7%BE%A4_-_Tableau%E5%AE%9E%E7%8E%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://xiaobo1051087671.github.io" target="_blank">博的客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/02/26/%E6%B2%83%E5%B0%94%E7%8E%9B%E4%BE%9B%E5%BA%94%E9%93%BE%E9%A2%84%E6%B5%8B%E4%BC%98%E5%8C%96%E9%A1%B9%E7%9B%AE/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">沃尔玛供应链预测优化项目</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Xiao Bo</div><div class="author-info__description">描述</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9B%B6%E5%94%AE%E4%BC%81%E4%B8%9A%E4%BC%9A%E5%91%98%E5%AE%A2%E6%88%B7%E7%9A%84%E5%90%88%E7%90%86%E5%88%86%E7%BE%A4-Tableau%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.</span> <span class="toc-text">零售企业会员客户的合理分群 - Tableau实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF"><span class="toc-number">1.0.1.</span> <span class="toc-text">项目背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%9B%AE%E6%A0%87"><span class="toc-number">1.0.2.</span> <span class="toc-text">项目目标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.0.3.</span> <span class="toc-text">项目步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%9C"><span class="toc-number">1.0.4.</span> <span class="toc-text">项目结果</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/02/28/%E9%9B%B6%E5%94%AE%E4%BC%81%E4%B8%9A%E4%BC%9A%E5%91%98%E5%AE%A2%E6%88%B7%E7%9A%84%E5%90%88%E7%90%86%E5%88%86%E7%BE%A4_-_Tableau%E5%AE%9E%E7%8E%B0/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/02/28/%E9%9B%B6%E5%94%AE%E4%BC%81%E4%B8%9A%E4%BC%9A%E5%91%98%E5%AE%A2%E6%88%B7%E7%9A%84%E5%90%88%E7%90%86%E5%88%86%E7%BE%A4_-_Tableau%E5%AE%9E%E7%8E%B0/" title="无题">无题</a><time datetime="2022-02-28T09:23:32.919Z" title="发表于 2022-02-28 17:23:32">2022-02-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/26/%E6%B2%83%E5%B0%94%E7%8E%9B%E4%BE%9B%E5%BA%94%E9%93%BE%E9%A2%84%E6%B5%8B%E4%BC%98%E5%8C%96%E9%A1%B9%E7%9B%AE/" title="沃尔玛供应链预测优化项目"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="沃尔玛供应链预测优化项目"/></a><div class="content"><a class="title" href="/2022/02/26/%E6%B2%83%E5%B0%94%E7%8E%9B%E4%BE%9B%E5%BA%94%E9%93%BE%E9%A2%84%E6%B5%8B%E4%BC%98%E5%8C%96%E9%A1%B9%E7%9B%AE/" title="沃尔玛供应链预测优化项目">沃尔玛供应链预测优化项目</a><time datetime="2022-02-26T09:28:05.810Z" title="发表于 2022-02-26 17:28:05">2022-02-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/24/%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%9A%E5%8A%A1%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/" title="互联网业务数据分析实战"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="互联网业务数据分析实战"/></a><div class="content"><a class="title" href="/2022/01/24/%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%9A%E5%8A%A1%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/" title="互联网业务数据分析实战">互联网业务数据分析实战</a><time datetime="2022-01-24T07:13:56.392Z" title="发表于 2022-01-24 15:13:56">2022-01-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/29/%E5%92%8C%E5%AD%90%E7%94%B1%E6%B8%91%E6%B1%A0%E6%80%80%E6%97%A7/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2021/12/29/%E5%92%8C%E5%AD%90%E7%94%B1%E6%B8%91%E6%B1%A0%E6%80%80%E6%97%A7/" title="无题">无题</a><time datetime="2021-12-29T07:03:03.493Z" title="发表于 2021-12-29 15:03:03">2021-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/30/hexo%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" title="hexo常用操作"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo常用操作"/></a><div class="content"><a class="title" href="/2021/10/30/hexo%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" title="hexo常用操作">hexo常用操作</a><time datetime="2021-10-30T10:36:26.000Z" title="发表于 2021-10-30 18:36:26">2021-10-30</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Xiao Bo</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
